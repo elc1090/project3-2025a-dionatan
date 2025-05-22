@@ -59,7 +59,7 @@ export default function RootLayout({
                         },
                       },
                       {
-                        name: "notas_posts",
+                        name: "notas_",
                         list: "/notas",
                         create: "/notas/create",
                         edit: "/notas/edit/:id",
