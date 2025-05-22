@@ -58,13 +58,23 @@ export default function RootLayout({
                           canDelete: true,
                         },
                       },
+                      {
+                        name: "nota_posts",
+                        list: "/nota-posts",
+                        create: "/nota-posts/create",
+                        edit: "/nota-posts/edit/:id",
+                        show: "/nota-posts/show/:id",
+                        meta: {
+                          canDelete: true,
+                        },
+                      },
                     ]}
                     options={{
                       syncWithLocation: true,
                       warnWhenUnsavedChanges: true,
                       useNewQueryKeys: true,
                       projectId: "qIfXa8-ixnTAb-JKIY5m",
-                      title: { text: "Refine Project", icon: <AppIcon /> },
+                      title: { text: "Talk to Text", icon: <AppIcon /> },
                     }}
                   >
                     {children}
