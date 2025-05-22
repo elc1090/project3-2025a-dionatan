@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 import React, { Suspense } from "react";
-import { Refine, GitHubBanner } from "@refinedev/core";
+import { Refine } from "@refinedev/core";
 import { DevtoolsProvider } from "@providers/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import {
@@ -38,7 +38,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense>
-          <GitHubBanner />
           <RefineKbarProvider>
             <ColorModeContextProvider defaultMode={defaultMode}>
               <RefineSnackbarProvider>
@@ -55,16 +54,6 @@ export default function RootLayout({
                         create: "/blog-posts/create",
                         edit: "/blog-posts/edit/:id",
                         show: "/blog-posts/show/:id",
-                        meta: {
-                          canDelete: true,
-                        },
-                      },
-                      {
-                        name: "categories",
-                        list: "/categories",
-                        create: "/categories/create",
-                        edit: "/categories/edit/:id",
-                        show: "/categories/show/:id",
                         meta: {
                           canDelete: true,
                         },
