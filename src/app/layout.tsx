@@ -59,11 +59,11 @@ export default function RootLayout({
                         },
                       },
                       {
-                        name: "nota_posts",
-                        list: "/nota-posts",
-                        create: "/nota-posts/create",
-                        edit: "/nota-posts/edit/:id",
-                        show: "/nota-posts/show/:id",
+                        name: "notas_posts",
+                        list: "/notas",
+                        create: "/notas/create",
+                        edit: "/notas/edit/:id",
+                        show: "/notas/show/:id",
                         meta: {
                           canDelete: true,
                         },
