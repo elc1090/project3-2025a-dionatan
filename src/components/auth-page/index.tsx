@@ -8,8 +8,8 @@ export const AuthPage = (props: AuthPageProps) => {
       {...props}
       formProps={{
         defaultValues: {
-          email: "dionatan@refine.supabase",
-          password: "dev-web",
+          email: "info@refine.dev",
+          password: "refine-'supabase'",
         },
       }}
     />
