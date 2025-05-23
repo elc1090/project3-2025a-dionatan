@@ -49,17 +49,7 @@ export default function RootLayout({
                     notificationProvider={useNotificationProvider}
                     resources={[
                       {
-                        name: "blog_posts",
-                        list: "/blog-posts",
-                        create: "/blog-posts/create",
-                        edit: "/blog-posts/edit/:id",
-                        show: "/blog-posts/show/:id",
-                        meta: {
-                          canDelete: true,
-                        },
-                      },
-                      {
-                        name: "notes",
+                        name: "notas",
                         list: "/notas",
                         create: "/notas/create",
                         edit: "/notas/edit/:id",
