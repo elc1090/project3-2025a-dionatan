@@ -32,7 +32,7 @@ export default function NotesList() {
         headerAlign: "left",
       },
       {
-        field: "descricao",
+        field: "note",
         flex: 1,
         headerName: "Descrição",
         minWidth: 250,
