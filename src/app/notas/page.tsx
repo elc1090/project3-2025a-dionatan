@@ -14,7 +14,7 @@ import React from "react";
 export default function NotesList() {
   const { dataGridProps } = useDataGrid({
     syncWithLocation: true,
-    //resource: "notes", // Especifica a tabela 'notes'
+    resource: "todos", // Especifica a tabela 'todos'
     meta: {
       select: "*",
     },

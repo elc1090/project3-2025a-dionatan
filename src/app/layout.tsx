@@ -35,7 +35,7 @@ export default function RootLayout({
   const defaultMode = theme?.value === "dark" ? "dark" : "light";
 
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body>
         <Suspense>
           <RefineKbarProvider>
