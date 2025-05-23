@@ -14,7 +14,10 @@ import React from "react";
 export default function NotesList() {
   const { dataGridProps } = useDataGrid({
     syncWithLocation: true,
-    resource: "notes", // Especifica a tabela 'notes'
+    //resource: "notes", // Especifica a tabela 'notes'
+    meta: {
+      select: "*",
+    },
   });
 
   const columns = React.useMemo<GridColDef[]>(
