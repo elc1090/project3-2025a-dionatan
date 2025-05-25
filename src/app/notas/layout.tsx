@@ -5,20 +5,11 @@ import { authProviderServer } from "@providers/auth-provider/auth-provider.serve
 import { redirect } from "next/navigation";
 
 export default async function Layout({ children }: React.PropsWithChildren) {
-  const data = await getData();
-
-  if (!data.authenticated) {
-    return redirect(data?.redirectTo || "/login");
+  const { authenticated, redirectTo } = await authProviderServer.check();
+  
+  if (!authenticated) {
+    return redirect(redirectTo || "/login");
   }
 
   return <ThemedLayoutV2 Header={Header}>{children}</ThemedLayoutV2>;
-}
-
-async function getData() {
-  const { authenticated, redirectTo } = await authProviderServer.check();
-
-  return {
-    authenticated,
-    redirectTo,
-  };
 }
