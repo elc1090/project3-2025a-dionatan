@@ -3,9 +3,11 @@
 import { Box, TextField } from "@mui/material";
 import { Edit } from "@refinedev/mui";
 import { useForm } from "@refinedev/react-hook-form";
-import React from "react";
+import { useSession } from "@supabase/auth-helpers-react";
 
 export default function NotesEdit() {
+  const session = useSession();
+
   const {
     saveButtonProps,
     refineCore: { queryResult, formLoading },
@@ -15,7 +17,11 @@ export default function NotesEdit() {
     refineCoreProps: {
       resource: "todos",
       meta: {
+        // Adicione o user_id ao enviar dados
         select: "*",
+        headers: {
+          Authorization: `Bearer ${session?.access_token}`
+        }
       },
     },
   });
@@ -32,7 +38,7 @@ export default function NotesEdit() {
             required: "Este campo é obrigatório",
           })}
           error={!!errors.note}
-          helperText={errors.note?.message as string} // Cast explícito para string
+          helperText={errors.note?.message as string}
           margin="normal"
           fullWidth
           InputLabelProps={{ shrink: true }}
