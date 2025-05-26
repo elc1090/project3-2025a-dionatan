@@ -34,6 +34,10 @@ O processo de desenvolvimento exigiu a aprendizagem de novas tecnologias como o 
 - **(extensão)Auto Rename tag**: Renomeia a tag de fechamento HTML simultaneamente a escrita da tag de abertura.
 - **(extensão)Markdown Preview Github Styling**: Cria uma segunda aba dentro do VSCODE para a vizualização do README durante a criação facilitando o desenvolvimento do mesmo.
 
+#### Link para os commits do projeto
+[commits-link](https://github.com/Dionatan2019Rodrigues/TalkToText/commits/main/)
+
+
 #### Referências e créditos
 
 - [Canva](https://www.canva.com/) para construção do mockup deste README.
